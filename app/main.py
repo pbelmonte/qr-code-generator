@@ -6,7 +6,16 @@ from fastapi import FastAPI, Response
 from app.models import QRInfo
 from app.utils.qr_code import generate_qr_img
 
-app = FastAPI()
+
+app = FastAPI(
+    title="QRCodeGenerator",
+    description='Given an url and logo (optional), generates a QR code',
+    version="0.0.1",
+    license_info={
+        "name": "Apache 2.0",
+        "url": "https://www.apache.org/licenses/LICENSE-2.0.html",
+    },
+)
 
 
 @app.post(
