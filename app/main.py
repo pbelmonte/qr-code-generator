@@ -5,7 +5,6 @@ from PIL import Image
 from fastapi import FastAPI, Response, Form, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.models import QRInfo
 from app.utils.qr_code import generate_qr_img
 
 
